@@ -80,16 +80,35 @@ input[type="color"] {
     padding: 0 5px;
 }
 
-input:invalid, 
-select:invalid, 
+input:invalid,
+select:invalid,
 textarea:invalid {
     border-color: red;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='red' stroke-width='3'%3E%3Cline x1='6' y1='6' x2='18' y2='18'/%3E%3Cline x1='6' y1='18' x2='18' y2='6'/%3E%3C/svg%3E");
+    padding-right: 35px;
 }
 
-input:valid, 
-select:valid, 
+input:valid,
+select:valid,
 textarea:valid {
     border-color: green;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='green' stroke-width='3'%3E%3Cpolyline points='4,13 9,18 20,5'/%3E%3C/svg%3E");
+    padding-right: 35px;
+}
+
+/* radio e checkbox ficam de fora do tratamento de ícone/padding */
+input[type="radio"]:invalid,
+input[type="radio"]:valid,
+input[type="checkbox"]:invalid,
+input[type="checkbox"]:valid {
+    background-image: none;
+    padding-right: 0;
 }
 
 button {
